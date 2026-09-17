@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ur" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,33 +13,37 @@
         }
         body {
             background-color: #f4f6f9;
-            color: #333;
+            color: #222;
+            font-size: 18px;
+            direction: ltr; /* سیدھی سائیڈ سے شروع کرنے کے لیے */
+            text-align: left;
         }
         header {
             background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
             color: white;
-            padding: 20px;
+            padding: 25px 15px;
             text-align: center;
         }
         header h1 {
-            font-size: 24px;
-            margin-bottom: 5px;
+            font-size: 28px;
+            margin-bottom: 8px;
             color: #f39c12;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
         header h2 {
-            font-size: 16px;
-            margin-bottom: 5px;
+            font-size: 18px;
+            margin-bottom: 8px;
             color: #fff;
+            font-weight: bold;
         }
         header p {
-            font-size: 13px;
+            font-size: 15px;
             color: #ddd;
         }
         /* Slider Styling */
         .slider-container {
             width: 100%;
-            height: 220px;
+            height: 250px;
             overflow: hidden;
             position: relative;
             background: #000;
@@ -59,12 +63,12 @@
         .slide-text {
             position: absolute;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.75);
             color: white;
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             text-align: center;
-            font-size: 15px;
+            font-size: 16px;
             font-weight: bold;
         }
         /* Navigation Categories */
@@ -80,11 +84,12 @@
             background: #2c5364;
             color: white;
             border: none;
-            padding: 8px 15px;
-            margin-left: 8px;
+            padding: 10px 18px;
+            margin-right: 10px;
             border-radius: 20px;
-            font-size: 14px;
+            font-size: 15px;
             cursor: pointer;
+            font-weight: bold;
         }
         .cat-btn:hover {
             background: #0f2027;
@@ -94,47 +99,49 @@
             padding: 15px;
         }
         .section-title {
-            font-size: 18px;
-            margin: 20px 0 10px 0;
+            font-size: 20px;
+            margin: 25px 0 12px 0;
             color: #2c5364;
-            border-bottom: 2px solid #2c5364;
-            padding-bottom: 5px;
+            border-bottom: 3px solid #2c5364;
+            padding-bottom: 8px;
+            font-weight: bold;
         }
         .property-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 15px;
+            gap: 20px;
         }
         .property-card {
             background: white;
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
         .property-card img {
             width: 100%;
-            height: 180px;
+            height: 200px;
             object-fit: cover;
         }
         .property-content {
-            padding: 15px;
+            padding: 18px;
         }
         .property-content h3 {
-            font-size: 18px;
-            margin-bottom: 5px;
+            font-size: 19px;
+            margin-bottom: 8px;
             color: #111;
+            font-weight: bold;
         }
         .price {
             color: #27ae60;
             font-weight: bold;
-            font-size: 16px;
-            margin-bottom: 8px;
+            font-size: 17px;
+            margin-bottom: 10px;
         }
         .desc {
-            font-size: 13px;
-            color: #666;
-            margin-bottom: 12px;
-            line-height: 1.4;
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.5;
         }
         .whatsapp-btn {
             display: block;
@@ -142,19 +149,20 @@
             background: #25d366;
             color: white;
             text-align: center;
-            padding: 10px;
-            border-radius: 5px;
+            padding: 12px;
+            border-radius: 6px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 14px;
+            font-size: 16px;
         }
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 25px;
             background: #2c5364;
             color: white;
-            margin-top: 20px;
-            font-size: 13px;
+            margin-top: 30px;
+            font-size: 15px;
+            line-height: 1.6;
         }
         footer span {
             color: #f39c12;
@@ -166,116 +174,116 @@
 
     <header>
         <h1>D H A R S Lahore Property</h1>
-        <h2>رانا سہیل (CEO) - رابطہ نمبر: 0300-9493891</h2>
-        <p>ڈی ایچ اے لاہور فیز 1 سے فیز 9 تک - گھر، پلاٹس، پلازے اور دفاتر</p>
+        <h2>Rana Sohail (CEO) - Contact: 0300-9493891</h2>
+        <p>DHA Lahore Phase 1 to Phase 9 - Houses, Plots, Plazas & Offices</p>
     </header>
 
     <!-- Dynamic Image Slider -->
     <div class="slider-container" id="slider">
         <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80');">
-            <div class="slide-text">D H A R S Lahore Property - 10 مرلہ اور 1 کنال لگژری گھر</div>
+            <div class="slide-text">D H A R S Lahore Property - 10 Marla & 1 Kanal Luxury Houses</div>
         </div>
         <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80');">
-            <div class="slide-text">کمرشل پلازے، دفاتر اور رینٹ پراپرٹیز</div>
+            <div class="slide-text">Commercial Plazas, Offices & Rent Properties</div>
         </div>
         <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80');">
-            <div class="slide-text">رانا سہیل: 0300-9493891 - 10 مرلہ پلاٹس اور گھر برائے فروخت</div>
+            <div class="slide-text">Rana Sohail: 0300-9493891 - 10 Marla Plots & Houses for Sale</div>
         </div>
     </div>
 
     <!-- Quick Buttons -->
     <div class="categories">
-        <button class="cat-btn">برائے رینٹ</button>
-        <button class="cat-btn">10 مرلہ گھر & پلاٹ</button>
-        <button class="cat-btn">برائے فروخت</button>
-        <button class="cat-btn">پلازے & دفاتر</button>
+        <button class="cat-btn">For Rent</button>
+        <button class="cat-btn">10 Marla House & Plot</button>
+        <button class="cat-btn">For Sale</button>
+        <button class="cat-btn">Plazas & Offices</button>
         <button class="cat-btn">Phase 1 to 9</button>
     </div>
 
     <div class="container">
         
         <!-- Rent Section -->
-        <div class="section-title">برائے کرایہ / رینٹ (Rent Properties)</div>
+        <div class="section-title">Rent Properties</div>
         <div class="property-grid">
             <div class="property-card">
                 <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Rent House">
                 <div class="property-content">
-                    <h3>10 مرلہ اور 1 کنال گھر برائے کرایہ (For Rent)</h3>
-                    <div class="price">معقول کرائے پر دستیاب</div>
-                    <div class="desc">ڈی ایچ اے لاہور کے مختلف فیزز میں فیملی کے لیے بہترین 10 مرلہ اور 1 کنال کے گھر برائے کرایہ۔</div>
-                    <a href="https://wa.me/923009493891?text=السلام%20علیکم،%20मुझे%2010%20مرلہ%20یا%201%20کنال%20گھر%20برائے%20رینٹ%20چاہیے" class="whatsapp-btn" target="_blank">رابطہ کریں (رانا سہیل)</a>
+                    <h3>10 Marla & 1 Kanal House For Rent</h3>
+                    <div class="price">Available at Reasonable Rent</div>
+                    <div class="desc">Beautiful 10 Marla and 1 Kanal houses available for rent in prime phases of DHA Lahore.</div>
+                    <a href="https://wa.me/923009493891?text=Hello%20Rana%20Sohail,%20I%20am%20looking%20for%20a%20house%20for%20rent" class="whatsapp-btn" target="_blank">Contact via WhatsApp</a>
                 </div>
             </div>
 
             <div class="property-card">
                 <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80" alt="Office Rent">
                 <div class="property-content">
-                    <h3>4 & 8 Marla Commercial Plaza / Office (For Rent)</h3>
-                    <div class="price">مناسب ماہانہ کرایہ</div>
-                    <div class="desc">کمرشل مارکیٹ اور فیزز میں 4 مرلہ اور 8 مرلہ کے شاندار پلازے اور دفاتر برائے کرایہ۔</div>
-                    <a href="https://wa.me/923009493891?text=السلام%20علیکم،%20मुझे%20کمرشل%20پلازہ%20یا%20آفس%20برائے%20رینٹ%20چاہیے" class="whatsapp-btn" target="_blank">رابطہ کریں (رانا سہیل)</a>
+                    <h3>4 & 8 Marla Commercial Plaza / Office For Rent</h3>
+                    <div class="price">Best Monthly Rent</div>
+                    <div class="desc">Commercial plazas and offices available in prime commercial markets and phases.</div>
+                    <a href="https://wa.me/923009493891?text=Hello%20Rana%20Sohail,%20I%20am%20interested%20in%20commercial%20plaza%20or%20office%20for%20rent" class="whatsapp-btn" target="_blank">Contact via WhatsApp</a>
                 </div>
             </div>
         </div>
 
         <!-- 10 Marla Special Section (Houses & Plots) -->
-        <div class="section-title">10 مرلہ خصوصی کیٹیگری (10 Marla Houses & Plots)</div>
+        <div class="section-title">10 Marla Special Category (Houses & Plots)</div>
         <div class="property-grid">
             <div class="property-card">
                 <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80" alt="10 Marla House">
                 <div class="property-content">
-                    <h3>10 Marla Brand New House (For Sale)</h3>
-                    <div class="price">PKR 7.5 Crore سے 9.0 Crore</div>
-                    <div class="desc">ڈی ایچ اے لاہور کے مختلف فیزز میں شاندار اور پرتعیش ڈیزائن کے حامل 10 مرلہ کے نئے گھر برائے فروخت۔</div>
-                    <a href="https://wa.me/923009493891?text=السلام%20علیکم،%20मुझे%2010%20مرلہ%20گھر%20برائے%20فروخت%20کی%20معلومات%20چاہیے" class="whatsapp-btn" target="_blank">رابطہ کریں (رانا سہیل)</a>
+                    <h3>10 Marla Brand New House For Sale</h3>
+                    <div class="price">PKR 7.5 Crore to 9.0 Crore</div>
+                    <div class="desc">Luxurious brand new 10 Marla houses with modern architecture available for sale in DHA Lahore.</div>
+                    <a href="https://wa.me/923009493891?text=Hello%20Rana%20Sohail,%20I%20want%20details%20about%2010%20Marla%20house%20for%20sale" class="whatsapp-btn" target="_blank">Contact via WhatsApp</a>
                 </div>
             </div>
 
             <div class="property-card">
                 <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80" alt="10 Marla Plot">
                 <div class="property-content">
-                    <h3>10 Marla Residential Plot (For Sale)</h3>
-                    <div class="price">بہترین مارکیٹ ریٹ پر دستیاب</div>
-                    <div class="desc">گھر بنانے یا بہترین انویسٹمنٹ کے لیے ڈی ایچ اے فیز 1 سے 9 تک کے بہترین 10 مرلہ رہائشی پلاٹس۔</div>
-                    <a href="https://wa.me/923009493891?text=السلام%20علیکم،%20मुझे%2010%20مرلہ%20رہائشی%20پلاٹ%20خریدنا%20ہے" class="whatsapp-btn" target="_blank">رابطہ کریں (رانا سہیل)</a>
+                    <h3>10 Marla Residential Plot For Sale</h3>
+                    <div class="price">At Best Market Rates</div>
+                    <div class="desc">Prime 10 Marla residential plots available in DHA Phase 1 to 9 for building your dream home or investment.</div>
+                    <a href="https://wa.me/923009493891?text=Hello%20Rana%20Sohail,%20I%20want%20to%20buy%20a%2010%20Marla%20residential%20plot" class="whatsapp-btn" target="_blank">Contact via WhatsApp</a>
                 </div>
             </div>
         </div>
 
         <!-- Other Houses For Sale (1 Kanal, 5 Marla, 2 Kanal) -->
-        <div class="section-title">دیگر گھر برائے فروخت (1 Kanal, 5 Marla & 2 Kanal)</div>
+        <div class="section-title">Other Houses For Sale (1 Kanal, 5 Marla & 2 Kanal)</div>
         <div class="property-grid">
             <div class="property-card">
                 <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" alt="2 Kanal House">
                 <div class="property-content">
                     <h3>2 Kanal & 1 Kanal Luxury Houses</h3>
-                    <div class="price">ਪ්‍රੀਮੀਅਮ ਰೇਟ</div>
-                    <div class="desc">ڈی ایچ اے لاہور میں 2 کنال اور 1 کنال کے شاندار لگژری رہائشی مکانات برائے فروخت۔</div>
-                    <a href="https://wa.me/923009493891?text=السلام%20علیکم،%20मुझे%201%20اور%202%20کنال%20گھر%20کے%20بارے%20میں%20معلومات%20چاہیے" class="whatsapp-btn" target="_blank">رابطہ کریں (رانا سہیل)</a>
+                    <div class="price">Premium Rates</div>
+                    <div class="desc">Stunning 2 Kanal and 1 Kanal luxury residential bungalows for sale in DHA Lahore.</div>
+                    <a href="https://wa.me/923009493891?text=Hello%20Rana%20Sohail,%20I%20need%20info%20about%201%20and%202%20Kanal%20houses" class="whatsapp-btn" target="_blank">Contact via WhatsApp</a>
                 </div>
             </div>
         </div>
 
         <!-- Plots & Commercial Section -->
-        <div class="section-title">رہائشی اور کمرشل پلاٹس (Plots & Commercial Property)</div>
+        <div class="section-title">Plots & Commercial Properties</div>
         <div class="property-grid">
             <div class="property-card">
                 <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80" alt="Residential Plots">
                 <div class="property-content">
-                    <h3>رہائشی پلاٹس (5 Marla, 10 Marla, 1 Kanal - Phase 1 to 9)</h3>
-                    <div class="price">فیز وائز دستیاب</div>
-                    <div class="desc">تمام فیزز میں گھر کی تعمیر کے لیے بہترین اور سکیور رہائشی پلاٹس۔</div>
-                    <a href="https://wa.me/923009493891?text=السلام%20علیکم،%20मुझे%20رہائشی%20پلاٹس%20کی%20معلومات%20چاہیے" class="whatsapp-btn" target="_blank">رابطہ کریں (رانا سہیل)</a>
+                    <h3>Residential Plots (5 Marla, 10 Marla, 1 Kanal - Phase 1 to 9)</h3>
+                    <div class="price">Available Phase-Wise</div>
+                    <div class="desc">Secure and high-value residential plots available across all phases.</div>
+                    <a href="https://wa.me/923009493891?text=Hello%2%20Rana%20Sohail,%20I%20need%20details%20for%20residential%20plots" class="whatsapp-btn" target="_blank">Contact via WhatsApp</a>
                 </div>
             </div>
 
             <div class="property-card">
                 <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Commercial Property">
                 <div class="property-content">
-                    <h3>کمرشل پلاٹس اور پراپرٹی (Commercial Plots)</h3>
-                    <div class="price">منافع بخش انویسٹمنٹ</div>
-                    <div class="desc">کاروبار اور پلازہز کی تعمیر کے لیے کمرشل پلاٹس اور کمرشل پراپرٹی دستیاب ہے۔</div>
-                    <a href="https://wa.me/923009493891?text=السلام%20علیکم،%20मुझे%20کمرشل%20پلاٹ%20یا%20پراپرٹی%20چاہیے" class="whatsapp-btn" target="_blank">رابطہ کریں (رانا سہیل)</a>
+                    <h3>Commercial Plots & Properties</h3>
+                    <div class="price">High Return Investment</div>
+                    <div class="desc">Commercial plots and properties available for businesses and plaza construction.</div>
+                    <a href="https://wa.me/923009493891?text=Hello%20Rana%20Sohail,%20I%20am%20looking%20for%20commercial%20property" class="whatsapp-btn" target="_blank">Contact via WhatsApp</a>
                 </div>
             </div>
         </div>
@@ -283,7 +291,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2026 <span>D H A R S Lahore Property</span> | All Rights Reserved.<br>رانا سہیل (سی ای او): 0300-9493891</p>
+        <p>&copy; 2026 <span>D H A R S Lahore Property</span> | All Rights Reserved.<br>Rana Sohail (CEO): 0300-9493891</p>
     </footer>
 
     <!-- Slider Script -->
