@@ -522,6 +522,31 @@
     </div>
 
 </div>
+<!-- Google Business Floating Button -->
+<a href="Https://g.page/r/CTA_VARYA3uOEBI/review" target="_blank" aria-label="View Google Business" style="position: fixed; bottom: 90px; right: 20px; z-index: 20; background-color: #4285F4; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+    <span style="color: white; font-weight: bold; font-size: 14px;">GB</span>
+</a>
+
+<!-- JavaScript for Slide Timing (2 Seconds) -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let slides = document.querySelectorAll('#dha-hero-section #dha-slide');
+    let currentSlide = 0;
+
+    if (slides.length > 0) {
+        slides[0].style.opacity = '1';
+    }
+
+    function nextSlide() {
+        if (slides.length === 0) return;
+        slides[currentSlide].style.opacity = '0';
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].style.opacity = '1';
+    }
+
+    setInterval(nextSlide, 2000);
+});
+</script>
 
 </body>
 </html>
