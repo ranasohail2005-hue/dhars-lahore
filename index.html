@@ -55,6 +55,7 @@
             padding: 20px;
             background-color: #111827;
             justify-content: center;
+            flex-wrap: wrap;
         }
         .btn-google, .btn-whatsapp {
             padding: 12px 25px;
@@ -72,20 +73,55 @@
             background-color: #15803d;
             color: #ffffff;
         }
+        /* Image Slider Styles */
+        .slider-container {
+            position: relative;
+            max-width: 900px;
+            margin: 30px auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+            border: 2px solid #374151;
+        }
+        .slide {
+            display: none;
+            text-align: center;
+            background-color: #111827;
+        }
+        .slide img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        .slide-caption {
+            padding: 15px;
+            background: rgba(17, 24, 39, 0.95);
+            color: #f59e0b;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
         .hero {
             position: relative;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab') no-repeat center center/cover;
-            padding: 70px 20px;
+            padding: 40px 20px;
             text-align: center;
+            background-color: #0b0f19;
         }
         .hero h1 {
-            font-size: 38px;
-            margin-bottom: 15px;
+            font-size: 34px;
+            margin-bottom: 10px;
             color: #f59e0b;
             text-transform: uppercase;
         }
         .hero p {
-            font-size: 20px;
+            font-size: 18px;
             margin-bottom: 25px;
             color: #e5e7eb;
             font-weight: 500;
@@ -95,7 +131,7 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 10px;
         }
@@ -103,7 +139,7 @@
             background: rgba(17, 24, 39, 0.95);
             border: 1px solid #374151;
             border-radius: 10px;
-            width: 280px;
+            width: 320px;
             padding: 20px;
             text-align: left;
             box-shadow: 0 4px 6px rgba(0,0,0,0.3);
@@ -141,7 +177,7 @@
             display: inline-block;
             margin-bottom: 8px;
         }
-        .badge-available {
+        .badge-plot {
             background-color: #16a34a;
             color: white;
             padding: 4px 8px;
@@ -151,56 +187,12 @@
             display: inline-block;
             margin-bottom: 8px;
         }
-        .gallery-section {
-            padding: 40px 20px;
-            text-align: center;
-            background-color: #0b0f19;
-        }
-        .gallery-section h2 {
-            color: #ffffff;
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-        .gallery-section p {
-            color: #9ca3af;
-            margin-bottom: 25px;
-        }
-        .image-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        .image-card {
-            background: #111827;
-            border: 1px solid #374151;
-            border-radius: 8px;
-            overflow: hidden;
-            width: 320px;
-            text-align: left;
-        }
-        .image-card img {
-            width: 100%;
-            height: 210px;
-            object-fit: cover;
-        }
-        .image-card h4 {
-            color: #f59e0b;
-            margin: 12px 15px 5px 15px;
-            font-size: 18px;
-        }
-        .image-card p {
-            color: #d1d5db;
-            margin: 0 15px 15px 15px;
-            font-size: 14px;
-        }
         .social-links {
             text-align: center;
             padding: 25px;
             background-color: #111827;
             border-top: 1px solid #1f2937;
+            margin-top: 40px;
         }
         .social-links a {
             color: #f59e0b;
@@ -223,84 +215,109 @@
         <nav>
             <a href="#">Home</a>
             <a href="#">Commercial</a>
-            <a href="#">Phase 8 Plazas</a>
+            <a href="#">Phase 8</a>
         </nav>
     </header>
 
-    <!-- Quick Action Buttons -->
+    <!-- Quick Action Buttons: Google Business & WhatsApp -->
     <div class="buttons-container">
         <a href="https://business.google.com" class="btn-google" target="_blank">G Google Business</a>
         <a href="https://wa.me/" class="btn-whatsapp" target="_blank">WhatsApp Chat</a>
     </div>
 
-    <!-- Hero Section -->
+    <!-- Image Slider Section -->
+    <div class="slider-container">
+        <div class="slide fade">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab" alt="Phase 8 Commercial Plaza">
+            <div class="slide-caption">Phase 8 - Modern Commercial Plaza (4 & 8 Marla)</div>
+        </div>
+
+        <div class="slide fade">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Luxury House">
+            <div class="slide-caption">Luxury Houses & High-End Rental Properties[span_0](start_span)[span_0](end_span)[span_1](start_span)[span_1](end_span)[span_2](start_span)[span_2](end_span)[span_3](start_span)[span_3](end_span)[span_4](start_span)[span_4](end_span)[span_5](start_span)[span_5](end_span)[span_6](start_span)[span_6](end_span)[span_7](start_span)[span_7](end_span)[span_8](start_span)[span_8](end_span)[span_9](start_span)[span_9](end_span)</div>
+        </div>
+
+        <div class="slide fade">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef" alt="DHA Plot">
+            <div class="slide-caption">DHA Lahore - Prime Location Residential & Commercial Plots</div>
+        </div>
+    </div>
+
+    <!-- Hero Section & Property Cards -->
     <section class="hero">
-        <h1>DHA Phase 8 Commercial Plazas & Properties</h1>
-        <p>Exclusive 4 Marla & 8 Marla Plazas, Houses, and Plots Available for Sale & Rent</p>
+        <h1>DHA Phase 8 Commercial & Residential Portfolio</h1>
+        <p>Aap ki behtareen investment aur rent ke liye DHA Lahore Phase 8 ki properties</p>
         
-        <!-- Property Cards Layout -->
+        <!-- Property Cards Layout (Phase 8 Separated) -->
         <div class="property-box-container">
+            <!-- 1. Phase 8 - 4 Marla Plaza -->
             <div class="property-card">
                 <span class="badge-sale-rent">SALE & RENT</span>
                 <h3>Phase 8 - 4 Marla Plaza</h3>
-                <p>Modern architecture 4 Marla commercial plazas available in DHA Phase 8 for both sale and rent.</p>
+                <p>Modern architecture wala 4 Marla commercial plaza, sale aur rent dono ke liye available hai.</p>
             </div>
             
+            <!-- 2. Phase 8 - 8 Marla Plaza -->
             <div class="property-card">
                 <span class="badge-sale-rent">SALE & RENT</span>
                 <h3>Phase 8 - 8 Marla Plaza</h3>
-                <p>Prime location 8 Marla spacious commercial plazas available in DHA Phase 8 for sale and rent.</p>
+                <p>Prime location par shandar 8 Marla commercial plaza, sale aur rent ke liye maujood hai.</p>
+            </div>
+
+            <!-- 3. Phase 8 - Full Plaza For Rent -->
+            <div class="property-card">
+                <span class="badge-rent">FOR RENT</span>
+                <h3>Phase 8 - Full Plaza (Rent)</h3>
+                <p>Brand new full commercial plaza Phase 8 mein pure building rent ke liye available hai.</p>
+            </div>
+
+            <!-- 4. Phase 8 - 4 Marla Plot -->
+            <div class="property-card">
+                <span class="badge-plot">PLOT FILE / PLOT</span>
+                <h3>Phase 8 - 4 Marla Plot</h3>
+                <p>Commercial aur residential requirement ke mutabiq Phase 8 mein 4 marla plot available hai.</p>
+            </div>
+
+            <!-- 5. Phase 8 - 8 Marla Plot -->
+            <div class="property-card">
+                <span class="badge-plot">PLOT FILE / PLOT</span>
+                <h3>Phase 8 - 8 Marla Plot</h3>
+                <p>Behtareen location aur investment ke liye Phase 8 mein 8 marla plot available hai.</p>
             </div>
             
+            <!-- 6. Luxury Houses -->
             <div class="property-card">
                 <span class="badge-rent">FOR RENT</span>
                 <h3>Luxury Houses</h3>
-                <p>1 Kanal & Brand New Houses Available for Rent with High-End Finishing[span_10](start_span)[span_10](end_span)[span_11](start_span)[span_11](end_span)[span_12](start_span)[span_12](end_span)[span_13](start_span)[span_13](end_span)[span_14](start_span)[span_14](end_span)[span_15](start_span)[span_15](end_span)[span_16](start_span)[span_16](end_span)[span_17](start_span)[span_17](end_span)[span_18](start_span)[span_18](end_span)[span_19](start_span)[span_19](end_span).</p>
-            </div>
-            
-            <div class="property-card">
-                <span class="badge-available">AVAILABLE</span>
-                <h3>DHA Plots</h3>
-                <p>Residential and Commercial Plots available in Phase 6, Phase 7, and Phase 8.</p>
+                <p>1 Kanal aur brand new luxury houses high-end finishing ke sath rent ke liye available hain[span_10](start_span)[span_10](end_span)[span_11](start_span)[span_11](end_span)[span_12](start_span)[span_12](end_span)[span_13](start_span)[span_13](end_span)[span_14](start_span)[span_14](end_span)[span_15](start_span)[span_15](end_span)[span_16](start_span)[span_16](end_span)[span_17](start_span)[span_17](end_span)[span_18](start_span)[span_18](end_span)[span_19](start_span)[span_19](end_span).</p>
             </div>
         </div>
     </section>
 
-    <!-- Detailed Gallery Section with Plazas, Houses and Real Plots -->
-    <section class="gallery-section">
-        <h2>Property Portfolio Preview</h2>
-        <p>Real glimpses of Plazas, Luxury Houses, and DHA Plots</p>
-        
-        <div class="image-grid">
-            <!-- Phase 8 Plaza Preview -->
-            <div class="image-card">
-                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab" alt="Phase 8 Commercial Plaza">
-                <h4>Phase 8 Commercial Plaza</h4>
-                <p>Modern exterior view matching 4 & 8 Marla commercial standards.</p>
-            </div>
-
-            <!-- Luxury House Preview -->
-            <div class="image-card">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Luxury House Interior">
-                <h4>Luxury Rental House</h4>
-                <p>High-end finishing, stylish ceilings, and modern living spaces[span_20](start_span)[span_20](end_span)[span_21](start_span)[span_21](end_span)[span_22](start_span)[span_22](end_span)[span_23](start_span)[span_23](end_span)[span_24](start_span)[span_24](end_span)[span_25](start_span)[span_25](end_span)[span_26](start_span)[span_26](end_span)[span_27](start_span)[span_27](end_span)[span_28](start_span)[span_28](end_span)[span_29](start_span)[span_29](end_span).</p>
-            </div>
-
-            <!-- Real DHA Plot Preview -->
-            <div class="image-card">
-                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef" alt="DHA Residential Plot">
-                <h4>DHA Residential Plot</h4>
-                <p>Developed and ready-to-build prime location plots in DHA Lahore.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer / Social Links -->
+    <!-- Footer / Social Links (Facebook & TikTok) -->
     <div class="social-links">
-        <p>Connect with us on Social Media:</p>
-        <a href="#" target="_blank">Facebook</a> | 
-        <a href="#" target="_blank">TikTok</a>
+        <p>Hum se Social Media par rabta karein:</p>
+        <a href="https://facebook.com" target="_blank">Facebook</a> | 
+        <a href="https://tiktok.com" target="_blank">TikTok</a>
     </div>
+
+    <!-- JavaScript for Auto Image Slider -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 3500); // Change image every 3.5 seconds
+        }
+    </script>
 
 </body>
 </html>
