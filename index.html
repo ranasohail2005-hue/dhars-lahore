@@ -576,26 +576,29 @@
         updateSlider();
         setInterval(updateSlider, 3500);
 
-        // Visitor Counter
-        let visitors = 500;
-        const visitorSpan = document.getElementById("visitorCount");
-        if(localStorage.getItem('dha_visitors')) {
-            visitors = parseInt(localStorage.getItem('dha_visitors'));
-        } else {
-            localStorage.setItem('dha_visitors', visitors);
-        }
-        setTimeout(() => {
-            visitors += Math.floor(Math.random() * 3) + 1;
-            visitorSpan.textContent = visitors;
-            localStorage.setItem('dha_visitors', visitors);
-        }, 4000);
+        
 
         // Form Submit Alert
         document.getElementById("inquiryForm").addEventListener("submit", function(e) {
             e.preventDefault();
+
             alert("Shukriya! Aapka form successfully submit ho gaya hai.");
+           
             this.reset();
         });
-       
+       // Visitor Counter (API)
+function updateVisitorCount() {
+    fetch('https://api.countapi.xyz/hit/dhars-lahore/visits')
+        .then(res => res.json())
+        .then(res => {
+            const visitorSpan = document.getElementById('visitorCount');
+            if (visitorSpan) {
+                visitorSpan.textContent = res.value;
+            }
+        })
+        .catch(err => console.error(err));
+}
+updateVisitorCount();
+
  </script>
 </body>
