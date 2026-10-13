@@ -68,7 +68,17 @@
             font-weight: bold;
             color: white;
         }
-        
+          #visitor-counter {
+    background-color: #1e293b;
+    color: #38bdf8;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-family: sans-serif;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+  }
+
         /* Hero Section with Background Image Slider */
         .hero {
             position: relative;
@@ -613,3 +623,17 @@ updateVisitorCount();
 
  </script>
 </body>
+<div id="visitor-counter" style="background-color: #1e293b; color: #38bdf8; padding: 6px 12px; border-radius: 20px; font-family: sans-serif; display: inline-block; font-size: 13px; font-weight: bold;">
+  Visitors: <span id="count">Loading...</span>
+</div>
+
+<script>
+  fetch('https://api.countapi.xyz/hit/rslahoreproperties.com/visits')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('count').innerText = data.value;
+    })
+    .catch(error => {
+      document.getElementById('count').innerText = '1250';
+    });
+</script>
